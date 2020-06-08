@@ -99,6 +99,7 @@ describe('Login router', () => {
     expect(httpResponse.statusCode).toBe(401)
     expect(httpResponse.body).toEqual(new UnauthorizedError())
   })
+
   test('Should return 200 when valid credentials are provided', async () => {
     const { sut, authUseCaseSpy } = makeSut()
     const httpRequest = {
