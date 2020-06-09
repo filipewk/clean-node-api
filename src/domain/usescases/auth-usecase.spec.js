@@ -1,5 +1,5 @@
 const AuthUseCase = require('./auth-usecase')
-const { MissingParamError } = require('../../errors')
+const { MissingParamError } = require('../../utils/errors')
 
 const makeEncrypter = () => {
   class EncrypterSpy {
