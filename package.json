@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --silent --noStackTrace --passWithNoTests",
-    "test:unit": "npm test -- --watch -c jest-unit-config.js",
+    "test:unit": "npm test -- --watch  -c jest-unit-config.js",
     "test:integration": "npm test -- --watch -c jest-integration-config.js",
     "test:staged": "npm test -- --findRelatedTests",
     "test:ci": "npm test -- --coverage"
@@ -40,6 +40,7 @@
   },
   "homepage": "https://github.com/filipewk/clean-node-api#readme",
   "devDependencies": {
+    "@shelf/jest-mongodb": "^1.1.5",
     "husky": "^4.2.5",
     "jest": "^26.0.1",
     "lint-staged": "^10.2.9",
@@ -48,6 +49,7 @@
   "dependencies": {
     "bcrypt": "^5.0.0",
     "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.5.8",
     "validator": "^13.0.0"
   }
 }
