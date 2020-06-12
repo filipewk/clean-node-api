@@ -23,12 +23,22 @@ describe('Login Routes', () => {
       email: 'valid_email@mail.com',
       password: bcrypt.hashSync('hashed_password', 10)
     })
-    const res = await request(app)
+    await request(app)
       .post('/api/login')
       .send({
         email: 'valid_email@mail.com',
         password: 'hashed_password'
       })
-    expect(res.statusCode).toBe(200)
+      .expect(200)
+  })
+
+  test('Should return 401 when invalid credential are provided', async () => {
+    await request(app)
+      .post('/api/login')
+      .send({
+        email: 'valid_email@mail.com',
+        password: 'hashed_password'
+      })
+      .expect(401)
   })
 })
