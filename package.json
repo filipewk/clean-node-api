@@ -16,19 +16,6 @@
       "jest"
     ]
   },
-  "lint-staged": {
-    "*.js": [
-      "standard --fix",
-      "npm run test:staged",
-      "git add"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "npm run test:ci"
-    }
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/filipewk/clean-node-api.git"
@@ -42,9 +29,7 @@
   "homepage": "https://github.com/filipewk/clean-node-api#readme",
   "devDependencies": {
     "@shelf/jest-mongodb": "^1.1.5",
-    "husky": "^4.2.5",
     "jest": "^26.0.1",
-    "lint-staged": "^10.2.9",
     "standard": "^14.3.4",
     "supertest": "^4.0.2"
   },
